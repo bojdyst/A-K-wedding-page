@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1">
+    <link rel="stylesheet"
+          href="https://www.w3schools.com/w3css/4/w3.css"><!-- Icons -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+    <link rel="stylesheet"
+        href="sheet.css"
+        media="screen"
+        type="text/css">
+    <title>
+      A&K wedding
+    </title>
+    <link rel="icon" type="image/png" href="logo.png">
+  </head>
+  <body style="background-color:rgb(255, 236, 167);">
+    <div class="w3-sidebar w3-bar-block w3-aqua w3-card" style="width:140px">
+      <h5 class="w3-bar-item">Menu</h5>
+      <button class="w3-bar-item w3-button tablink" onclick="openLink(event, 'Informacje'); closeHeader()">Informacje</button>
+      <button class="w3-bar-item w3-button tablink" onclick="openLink(event, 'Jak dojechać?'); closeHeader()">Jak dojechać?</button>
+      <button class="w3-bar-item w3-button tablink" onclick="openLink(event, 'Galeria zdjęć'); closeHeader()">Galeria zdjęć</button>
+    </div>
+    <div style="margin-left:140px">
+      <div id="mainHeader" class="w3-padding w3-center">
+        <h1>Oficjalna strona ślubna Asi i Karola</h1>
+        <div class="slideshow-container">
+            <div class="mySlides fade">
+              <img src="z1.jpg" style="width:100%">
+              <div class="text">Ślub kuzyna Karola</div>
+            </div>
+            <div class="mySlides fade">
+              <img src="z2.jpg" style="width:100%">
+              <div class="text">Komers</div>
+            </div>
+            <div class="mySlides fade">
+              <img src="z3.jpg" style="width:100%">
+              <div class="text">Sesja narzeczeńska</div>
+            </div>
+            <div class="mySlides fade">
+              <img src="z4.jpg" style="width:100%">
+              <div class="text">Sesja narzeczeńska - c.d.</div>
+            </div>
+            <a class="prev w3-left" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+          </div>
+      </div>
+      <div id="Informacje" class="w3-container disappear w3-animate-bottom" style="display:none">
+        <h1 class="w3-center">Informacje</h1>
+        <p class="w3-center">Ślub odbędzie się</p>
+      </div>
+      <div id="Jak dojechać?" class="w3-container disappear w3-animate-bottom" style="display:none">
+        <h1 class="w3-center">Jak dojechać?</h1>
+        <p class="w3-center">Pałac Magnus Royal to niepowtarzalny i wyjątkowy obiekt położony jest w malowniczej, górskiej okolicy Bielska-Białej, a dokładniej w Brennej. Poniżej zamieszczamy <br>
+            mapkę, aby łatwiej było do Nas trafić ;)
+        </p>
+        <div class="w3-center">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9454.15744761419!2d19.014676714933284!3d49.75864611611803!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471421ea558ab6bb%3A0x41c51067beec1bba!2sPa%C5%82ac%20Magnus%20Royal!5e0!3m2!1spl!2spl!4v1675719389101!5m2!1spl!2spl" width="1200px" height="600px" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+      <div id="Galeria zdjęć" class="w3-container disappear w3-animate-bottom" style="display:none">
+        <h1 class="w3-center">Galeria zdjęć</h1>
+        <img src="z1.jpg" class="w3-hover-grayscale" style="width: 50%">
+      </div>
+    </div> 
+    <script>
+    function closeHeader() {
+      document.getElementById("mainHeader").style.display = "none";
+    }
+
+    function openLink(evt, animName) {
+      var i, x, tablinks;
+      x = document.getElementsByClassName("disappear");
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+      }
+      tablinks = document.getElementsByClassName("tablink");
+      for (i = 0; i < x.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace("w3-amber", "");
+      }
+      document.getElementById(animName).style.display = "block";
+      evt.currentTarget.className += " w3-amber";
+    }
+
+    let slideIndex = 1;
+    showSlides(slideIndex);
+
+    // Next/previous controls
+    function plusSlides(n) {
+    showSlides(slideIndex += n);
+    }
+
+    // Thumbnail image controls
+    function currentSlide(n) {
+    showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+    let i;
+    let slides = document.getElementsByClassName("mySlides");
+    let dots = document.getElementsByClassName("dot");
+    if (n > slides.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";
+    dots[slideIndex-1].className += " active";
+    }
+    </script>
+    </body>
+</html>
