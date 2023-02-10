@@ -8,7 +8,7 @@ body {
 }
 
 .slideshow-container {
-  max-width: 1000px;
+  max-width: 65vw;
   position: relative;
   margin: auto;
 }
@@ -24,10 +24,10 @@ body {
   width: auto;
   margin-left: -45%;
   margin-top: -22px;
-  padding: 16px;
+  padding: 1.2vw;
   color: white;
   font-weight: bold;
-  font-size: 18px;
+  font-size: 1.6vw;
   transition: 0.6s ease;
   border-radius: 0 3px 3px 0;
   user-select: none;
@@ -67,6 +67,11 @@ font-family: 'Sans-serif';
 
 .sidebar {
   background-color: #97cefa;
+  width: 9%;
+}
+
+.main-contnet-margin {
+  margin-left: 9%;
 }
 
 .row {
@@ -108,7 +113,7 @@ font-family: 'Sans-serif';
   to {opacity: 1}
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-device-width: 600px) {
   .column {
     flex: 100%;
     max-width: 100%;
@@ -117,11 +122,42 @@ font-family: 'Sans-serif';
   .maps-on-phone-1 {
     height: 100%;
   }
+
+  .sidebar {
+    min-width: 18.3%;
+  }
+
+  .menu-text-font {
+    font-size: 1.8vw;
+  }
+
+  .main-contnet-margin {
+    margin-left: 15%;
+    margin-right: -4%;
+  }
+
+  .text-font {
+    margin-left: 2.5%;
+    margin-right: 4%;
+  }
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (min-device-width: 600px) and (max-device-width: 800px) {
   .column {
     flex: 50%;
     max-width: 50%;
+  }
+
+  .main-contnet-margin {
+    margin-left: 11%;
+    margin-right: 4%;
+  }
+
+  .sidebar {
+    width: 14%;
+  }
+
+  .maps-on-phone-2 {
+    height: 40vw;
   }
 }
