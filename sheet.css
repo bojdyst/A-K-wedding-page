@@ -43,26 +43,38 @@ body {
 }
 
 .main-header-font {
-  font-size: 4.5vw;
-  font-weight: bold;
-  font-family: 'Wedding', sans-serif;
+  font-size: 3.7vw;
+  font-family: 'Lobster';
+  margin-top: -0.5%;
+}
+
+.main-header-date-font {
+  font-size: 2.4vw;
+  font-family: 'Lobster';
+  margin-top: -1.7%;
 }
 
 .headers-font {
-  font-size: 3.6vw;
-  font-weight: bold;
-  font-family: 'Wedding', sans-serif;
+  font-size: 3.7vw;
+  font-family: 'Lobster';
 }
 
 .text-font {
-  font-size: 1.4vw;
-  font-weight: bold;
-  font-family: 'Avantgarde', cursive;
+  font-size: 2.4vw;
+  font-family: 'Lobster', cursive;
+}
+
+.more-readable-format {
+  border-style: solid;
+  border-width: 0.1vw;
+  border-color: black;
+  background-color: white;
+  padding: 1%;
 }
 
 .menu-text-font {
-font-size: 1.2vw;
-font-family: 'Sans-serif';
+  font-size: 1.4vw;
+  font-family: 'Division One', sans-serif;
 }
 
 .sidebar {
@@ -115,8 +127,8 @@ font-family: 'Sans-serif';
 
 @media screen and (max-device-width: 600px) {
   .column {
-    flex: 100%;
-    max-width: 100%;
+    flex: 50%;
+    max-width: 50%;
   }
 
   .maps-on-phone-1 {
@@ -124,37 +136,68 @@ font-family: 'Sans-serif';
   }
 
   .sidebar {
-    min-width: 18.3%;
+    min-width: 19.5%;
+    margin-left: -1%;
   }
 
   .menu-text-font {
-    font-size: 1.8vw;
+    font-size: 2.5vw;
   }
 
   .main-contnet-margin {
-    margin-left: 15%;
-    margin-right: -4%;
+    margin-left: 18%;
+    margin-right: -1.5%;
   }
 
   .text-font {
-    margin-left: 2.5%;
-    margin-right: 4%;
+    font-size: 3vw;
+  }
+
+  .main-header-font {
+    font-size: 4.5vw;
+  }
+  
+  .main-header-date-font {
+    font-size: 3.5vw;
+  }
+  
+  .headers-font {
+    font-size: 4.5vw;
   }
 }
 
-@media screen and (min-device-width: 600px) and (max-device-width: 800px) {
+@media screen and (min-device-width: 600px) and (max-device-width: 900px) {
   .column {
     flex: 50%;
     max-width: 50%;
   }
 
-  .main-contnet-margin {
-    margin-left: 11%;
-    margin-right: 4%;
+  .sidebar {
+    min-width: 18%;
   }
 
-  .sidebar {
-    width: 14%;
+  .menu-text-font {
+    font-size: 2.5vw;
+  }
+
+  .main-contnet-margin {
+    margin-left: 18%;
+  }
+
+  .text-font {
+    font-size: 3vw;
+  }
+
+  .main-header-font {
+    font-size: 4.5vw;
+  }
+  
+  .main-header-date-font {
+    font-size: 3.5vw;
+  }
+  
+  .headers-font {
+    font-size: 4.5vw;
   }
 
   .maps-on-phone-2 {
