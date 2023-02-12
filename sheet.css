@@ -78,7 +78,7 @@ body {
 }
 
 .quote {
-  font-size: 2vw;
+  font-size: 2.4vw;
   font-family: 'Lobster';
 }
 
@@ -158,6 +158,10 @@ body {
     font-size: 3vw;
   }
 
+  .quote {
+    font-size: 3vw;
+  }
+
   .main-header-font {
     font-size: 4.5vw;
   }
@@ -190,6 +194,10 @@ body {
   }
 
   .text-font {
+    font-size: 3vw;
+  }
+
+  .quote {
     font-size: 3vw;
   }
 
